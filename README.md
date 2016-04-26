@@ -1,4 +1,4 @@
-# sandbox [![Build Status](https://travis-ci.org/vinxi/sandbox.png)](https://travis-ci.org/vinxi/sandbox) [![GoDoc](https://godoc.org/github.com/vinxi/sandbox?status.svg)](https://godoc.org/github.com/vinxi/sandbox) [![Coverage Status](https://coveralls.io/repos/github/vinxi/sandbox/badge.svg?branch=master)](https://coveralls.io/github/vinxi/sandbox?branch=master) [![Go Report Card](https://goreportcard.com/badge/github.com/vinxi/sandbox)](https://goreportcard.com/report/github.com/vinxi/sandbox)
+# sandbox [![Build Status](https://travis-ci.org/vinxi/sandbox.png)](https://travis-ci.org/vinxi/sandbox) [![GoDoc](https://godoc.org/github.com/vinxi/sandbox?status.svg)](https://godoc.org/github.com/vinxi/sandbox) [![Coverage Status](https://coveralls.io/repos/github/vinxi/sandbox/badge.svg?branch=master)](https://coveralls.io/github/vinxi/sandbox?branch=master) 
 
 Sandbox is a vinxi based full-featured, high-level, remotely configurable proxy solution.
 

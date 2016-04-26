@@ -1,12 +1,9 @@
 package sandbox
 
 import (
-	"io"
 	"net/http"
 	"strconv"
 	"time"
-
-	"github.com/bmizerany/pat"
 )
 
 var (
@@ -51,12 +48,13 @@ func NewServer(o ServerOptions) *http.Server {
 		WriteTimeout:   time.Duration(o.WriteTimeout) * time.Second,
 	}
 
-	m := pat.New()
-	m.Get("/", http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
-		io.WriteString(w, "admin server"+Version)
-	}))
-
-	server.Handler = m
-
 	return server
+}
+
+// Listen starts listening on the network.
+func Listen(server *http.Server, opts ServerOptions) error {
+	if opts.CertFile != "" && opts.KeyFile != "" {
+		return server.ListenAndServeTLS(opts.CertFile, opts.KeyFile)
+	}
+	return server.ListenAndServe()
 }
