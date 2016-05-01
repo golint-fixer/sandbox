@@ -100,7 +100,7 @@ func (m *Manager) NewScope(rules ...Rule) *Scope {
 	return scope
 }
 
-func (a *Manager) HandleHTTP(w http.ResponseWriter, r *http.Request, h http.Handler) {
+func (m *Manager) HandleHTTP(w http.ResponseWriter, r *http.Request, h http.Handler) {
 	next := h
 
 	for _, scope := range a.scopes {
@@ -131,7 +131,7 @@ type JSONScope struct {
 	Plugins []JSONPlugin `json:"plugins,omitempty"`
 }
 
-func (a *Manager) ServeAndListen(opts ServerOptions) (*http.Server, error) {
+func (m *Manager) ServeAndListen(opts ServerOptions) (*http.Server, error) {
 	a.Server = NewServer(opts)
 
 	m := pat.New()
